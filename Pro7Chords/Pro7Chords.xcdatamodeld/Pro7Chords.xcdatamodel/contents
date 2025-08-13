@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
+    <entity name="ChordChart" representedClassName="ChordChart" syncable="YES" codeGenerationType="category/extension">
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="key" optional="YES" attributeType="String"/>
+        <attribute name="lyrics" optional="YES" attributeType="String"/>
+        <attribute name="modifiedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="originalFileURL" optional="YES" attributeType="URI"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="chordPositions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ChordPositionEntity" inverseName="chordChart" inverseEntity="ChordPositionEntity"/>
+    </entity>
+    <entity name="ChordPositionEntity" representedClassName="ChordPositionEntity" syncable="YES" codeGenerationType="category/extension">
+        <attribute name="chord" optional="YES" attributeType="String"/>
+        <attribute name="position" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="slideId" optional="YES" attributeType="String"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="chordChart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ChordChart" inverseName="chordPositions" inverseEntity="ChordChart"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="ChordChart" positionX="-63" positionY="-18" width="128" height="134"/>
+        <element name="ChordPositionEntity" positionX="144" positionY="-9" width="128" height="104"/>
     </elements>
 </model>

@@ -1,0 +1,3 @@
+# This file has been removed to fix Core Data compilation conflicts.
+# The functionality has been moved to ChordChart+Extensions.swift
+# Date: $(date +%Y-%m-%d)
