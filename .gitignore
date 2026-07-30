@@ -1,0 +1,38 @@
+# macOS
+.DS_Store
+
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+
+# Xcode - build artifacts
+*.profraw
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.swiftpm/
+.build/
+
+# CocoaPods / Carthage (if ever used)
+Pods/
+Carthage/Build/
+
+# Backups / junk
+_trash/
+*.backup
+*.REMOVED
+*.REMOVED2
+backup_*/
+*_FIX_*.md
+
+# Editor
+.vscode/
+
+# Diagnostics scratch output (harness writes to /tmp, but just in case)
+*.profraw

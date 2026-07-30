@@ -1,0 +1,20 @@
+# Test Case: Your Original Issue
+
+## The Problem
+Original text: "I searched the world but it couldn't fill me"
+ChordPro text: "I[C/G] searched the [G]world but [C/G]it couldn't [G]fill me"
+
+## Expected Result
+- First chord "C/G" should be at position 1 (after "I")
+- All 4 chords should be preserved: C/G, G, C/G, G
+- Text should be processed correctly
+
+## Test It
+1. Open Pro7Chords app
+2. Click "Load ProPresenter File"  
+3. Select this file (or paste the ChordPro text directly)
+4. Click "Test Validation" to see if the first chord is preserved
+5. Check the console output for detailed validation results
+
+## Test Input
+I[C/G] searched the [G]world but [C/G]it couldn't [G]fill me
